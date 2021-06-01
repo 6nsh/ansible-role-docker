@@ -10,8 +10,8 @@
     update_cache: yes
 
 - name: Add the GPG key for the official Docker repository to your system
-  apt-key:
-    url: "https://download.docker.com/linux/debian/gpg"
+  apt_key:
+    url: https://download.docker.com/linux/debian/gpg
     state: present
 
 - name: Add the Docker repository to APT sources
@@ -25,10 +25,14 @@
 
 - name: Make sure you are about to install from the Docker repo instead of the default Debian repo
   shell: apt-cache policy docker-ce
+  register: shell_result
+- debug:
+    var: shell_result.stdout_lines
 
 - name: Install Docker
   apt:
     name: docker-ce
   notify:
     - check docker service status
+    - enable docker service
     - check docker version
