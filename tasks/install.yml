@@ -1,0 +1,34 @@
+---
+- name: Update repositories cache and install a few prerequisite packages which let apt use packages over HTTPS
+  apt:
+    pkg:
+    - apt-transport-https
+    - ca-certificates
+    - curl
+    - gnupg2
+    - software-properties-common
+    update_cache: yes
+
+- name: Add the GPG key for the official Docker repository to your system
+  apt-key:
+    url: "https://download.docker.com/linux/debian/gpg"
+    state: present
+
+- name: Add the Docker repository to APT sources
+  template: >
+    src=docker.list.j2
+    dest=/etc/apt/sources.list.d/docker.list
+
+- name: Update the package database with the Docker packages from the newly added repo
+  apt:
+    update_cache: yes
+
+- name: Make sure you are about to install from the Docker repo instead of the default Debian repo
+  shell: apt-cache policy docker-ce
+
+- name: Install Docker
+  apt:
+    name: docker-ce
+  notify:
+    - check docker service status
+    - check docker version

@@ -1,2 +1,10 @@
 ---
-# tasks file for docker
+- import_tasks: install.yml
+  tags:
+    - install_docker
+    - install
+
+#- import_tasks: configure.yml
+#  tags:
+#    - configure_docker
+#    - configure
