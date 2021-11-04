@@ -23,11 +23,11 @@
   apt:
     update_cache: yes
 
-- name: Make sure you are about to install from the Docker repo instead of the default Debian repo
-  shell: apt-cache policy docker-ce
-  register: shell_result
-- debug:
-    var: shell_result.stdout_lines
+# - name: Make sure you are about to install from the Docker repo instead of the default Debian repo
+#   shell: apt-cache policy docker-ce
+#   register: shell_result
+# - debug:
+#     var: shell_result.stdout_lines
 
 - name: Install Docker
   apt:

@@ -12,7 +12,7 @@
 - name: check docker service status
   shell: systemctl status docker
 
-- name: restart docker 
+- name: restart docker
   service:
     name: docker
     state: restarted
