@@ -1,6 +1,9 @@
 ---
-name: Molecule
-on: [push]
+name: Molecule test & Ansible-Galaxy CI
+on:
+  push:
+    branches:
+      - main
 
 defaults:
   run:
@@ -51,7 +54,7 @@ jobs:
           pip install --upgrade pip
           pip install ansible \
           ansible-lint \
-          molecule[docker, lint] \
+          molecule[docker,lint] \
           flake8 \
           yamllint \
           docker
