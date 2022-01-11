@@ -3,9 +3,11 @@ name: Molecule test & Ansible-Galaxy CI
 
 on:
   push:
-    branches: [ master ]
+    branches:
+      - master
   pull_request:
-    branches: [ master ]
+    branches:
+      - master
 
 defaults:
   run:
