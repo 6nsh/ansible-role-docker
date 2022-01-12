@@ -91,4 +91,5 @@ jobs:
         run: pip3 install ansible-base
 
       - name: Trigger a new import on Ansible Galaxy
-        run: ansible-galaxy role import --api-key ${{ secrets.ANSIBLE_GALAXY_API_KEY }} 6nsh docker
+        run: ansible-galaxy role import \
+          --api-key ${{ secrets.ANSIBLE_GALAXY_API_KEY }} 6nsh docker
