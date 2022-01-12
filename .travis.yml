@@ -6,7 +6,7 @@ sudo: false
 
 env:
   global:
-    - ROLE_NAME: adduser
+    - ROLE_NAME: docker
   matrix:
     - MOLECULE_DISTRO: bullseye
     - MOLECULE_DISTRO: buster
