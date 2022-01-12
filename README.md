@@ -2,7 +2,7 @@
 
 ![Build Status](https://github.com/6nsh/ansible-role-docker/actions/workflows/ansible-galaxy-ci.yml/badge.svg)
 
-This role helps to install Docker to Debian (buster/bullseye).
+This role helps to install and configure Docker to Debian (buster/bullseye).
 
 Requirements
 ------------
