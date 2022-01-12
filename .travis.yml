@@ -1,26 +1,26 @@
 ---
-language: python
+# language: python
 
-services: docker
-sudo: false
+# services: docker
+# sudo: false
 
-env:
-  global:
-    - ROLE_NAME: docker
-  matrix:
-    - MOLECULE_DISTRO: bullseye
-    - MOLECULE_DISTRO: buster
+# env:
+#   global:
+#     - ROLE_NAME: docker
+#   matrix:
+#     - MOLECULE_DISTRO: bullseye
+#     - MOLECULE_DISTRO: buster
 
-install:
-  - pip install yamllint ansible-lint flake8 'molecule[docker,lint]' docker
+# install:
+#   - pip install yamllint ansible-lint flake8 'molecule[docker,lint]' docker
   
-before_script:
-  - cd ../
-  - mv ansible-role-$ROLE_NAME 6nsh.$ROLE_NAME
-  - cd 6nsh.$ROLE_NAME
+# before_script:
+#   - cd ../
+#   - mv ansible-role-$ROLE_NAME 6nsh.$ROLE_NAME
+#   - cd 6nsh.$ROLE_NAME
 
-script:
-  - molecule test
+# script:
+#   - molecule test
 
-notifications:
-  webhooks: https://galaxy.ansible.com/api/v1/notifications/
+# notifications:
+#   webhooks: https://galaxy.ansible.com/api/v1/notifications/
