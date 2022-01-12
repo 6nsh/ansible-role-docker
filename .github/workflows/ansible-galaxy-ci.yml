@@ -94,5 +94,4 @@ jobs:
         run: |
           ansible-galaxy import \   
           --api-key ${{ secrets.ANSIBLE_GALAXY_API_KEY }} \
-          echo ${{ github.repository }} | cut -d/ -f1 \
-          echo ${{ github.repository }} | cut -d/ -f2
+          echo ${{ github.repository }} | cut -d/ -f1 echo ${{ github.repository }} | cut -d- -f3
