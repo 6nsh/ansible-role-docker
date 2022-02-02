@@ -4,9 +4,5 @@
 {% set release = "buster" %}
 {% elif ansible_distribution_major_version == '9' %}
 {% set release = "stretch" %}
-{% elif ansible_distribution_major_version == '8' %}
-{% set release = "jessie" %}
-{% elif ansible_distribution_major_version == '7' %}
-{% set release = "wheezy" %}
 {% endif %}
 deb https://download.docker.com/linux/debian {{ release }} stable
