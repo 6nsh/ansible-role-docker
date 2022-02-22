@@ -2,7 +2,5 @@
 {% set release = "bullseye" %}
 {% elif ansible_distribution_major_version == '10' %}
 {% set release = "buster" %}
-{% elif ansible_distribution_major_version == '9' %}
-{% set release = "stretch" %}
 {% endif %}
 deb https://download.docker.com/linux/debian {{ release }} stable
