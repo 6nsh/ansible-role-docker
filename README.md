@@ -1,9 +1,7 @@
 # Ansible Role Docker
 
-https://img.shields.io/badge/Ansible-000000?style=for-the-badge&logo=ansible&logoColor=white
-
 ![Build Status](https://github.com/6nsh/ansible-role-docker/actions/workflows/ansible-galaxy-ci.yml/badge.svg)
-[![Galaxy Role](https://img.shields.io/badge/Galaxy-6nsh.docker-FFFF00.svg)](https://galaxy.ansible.com/6nsh/docker/)
+[![Galaxy Role](https://img.shields.io/badge/Galaxy-6nsh.docker-48C9B0.svg)](https://galaxy.ansible.com/6nsh/docker/)
 
 This role helps to install and configure Docker to Debian (buster/bullseye).
 
